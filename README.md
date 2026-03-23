@@ -28,4 +28,3 @@ From another process, run:
 ```shell
 cargo run --bin call-service
 ```
-# skir-rust-example
