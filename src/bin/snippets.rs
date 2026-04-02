@@ -79,7 +79,7 @@ fn main() {
     let _ = [
         // Unknown is the default and is present in all Skir enums.
         SubscriptionStatus::Unknown(None),
-        SubscriptionStatus::default(),  // Same as ::Unknown(None)
+        SubscriptionStatus::default(), // Same as ::Unknown(None)
         SubscriptionStatus::Free,
         SubscriptionStatus::Premium,
         // Wrapper variants carry a value inside a Box.

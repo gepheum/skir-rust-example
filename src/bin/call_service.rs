@@ -1,4 +1,4 @@
-// Sends RPCs to the Skir service. See start-service for how to start it.
+// Sends RPCs to the SkirRPC service. See start-service for how to start it.
 //
 // Run with:
 //
@@ -12,7 +12,8 @@ use skir_rust_example::skirout::base::service::{
 };
 use skir_rust_example::skirout::base::user::{tarzan_const, SubscriptionStatus, User};
 
-fn main() {
+#[tokio::main]
+async fn main() {
     let client = ServiceClient::new("http://localhost:8787/myapi").unwrap();
 
     // Add two users.
@@ -38,6 +39,7 @@ fn main() {
                 },
                 &[],
             )
+            .await
             .unwrap();
         println!("Added user {:?} (id={})", name, id);
     }
@@ -53,6 +55,7 @@ fn main() {
             },
             &[],
         )
+        .await
         .unwrap();
 
     match resp.user {
