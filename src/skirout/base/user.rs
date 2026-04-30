@@ -446,7 +446,7 @@ fn initialize_module_serializers() {
         unsafe {
             let a: *mut crate::skir_client::internal::EnumAdapter<SubscriptionStatus> =
                 SubscriptionStatus::_adapter() as *const _ as *mut _;
-            (*a).add_constant_variant("FREE", 1, 1, "", SubscriptionStatus::Free);
+            (*a).add_constant_variant("free", 1, 1, "", SubscriptionStatus::Free);
             (*a).add_wrapper_variant(
                 "trial",
                 2,
@@ -461,7 +461,7 @@ fn initialize_module_serializers() {
                     _ => unreachable!(),
                 },
             );
-            (*a).add_constant_variant("PREMIUM", 3, 3, "", SubscriptionStatus::Premium);
+            (*a).add_constant_variant("premium", 3, 3, "", SubscriptionStatus::Premium);
             (*a).finalize();
         }
         unsafe {

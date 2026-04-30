@@ -911,9 +911,9 @@ dependencies = [
 
 [[package]]
 name = "skir-client"
-version = "0.1.1"
+version = "0.1.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a354228cfbe124384cac347f34aef6c4cb9c60a9904c4fa038ccfa2366889634"
+checksum = "3fe97a98d20bcc9d7c180eebb39aebaaa7ba6e943750896f2331b5f5ecaa3b1d"
 dependencies = [
  "anyhow",
  "reqwest",
